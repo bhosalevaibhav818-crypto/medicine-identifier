@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medicine Helper</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Healthcare helper</p>
+          <h1>Medicine Helper</h1>
+        </div>
+      </header>
+
+      <main class="main-grid">
+        <section class="panel input-panel">
+          <h2>Look up a medicine</h2>
+
+          <label class="search-box" for="medicineSearch">
+            <span>Search by name</span>
+            <input id="medicineSearch" type="text" placeholder="e.g. Paracetamol, Amoxicillin..." />
+          </label>
+
+          <button id="searchButton" class="primary-btn" type="button">Search</button>
+
+          <div class="divider"><span>or</span></div>
+
+          <label class="upload-box" for="scanInput">
+            <input id="scanInput" type="file" accept="image/*" />
+            <span>Scan medicine label</span>
+          </label>
+
+          <button id="scanButton" class="secondary-btn" type="button">Analyze image</button>
+
+          <div class="status-box">
+            <p id="statusText">Ready to check a medicine.</p>
+          </div>
+        </section>
+
+        <section class="panel output-panel">
+          <h2>Medicine details</h2>
+
+          <div id="medicineCard" class="medicine-card empty">
+            <p>Search a medicine or scan a label to see details.</p>
+          </div>
+
+          <div id="ocrResult" class="ocr-box hidden">
+            <h3>Detected text</h3>
+            <pre id="ocrText"></pre>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
